@@ -1,8 +1,0 @@
-package kr.hs.study;
-
-public class HelloWorldEn {
-
-	void SayHello() {
-		System.out.println("hello");
-	}
-}
