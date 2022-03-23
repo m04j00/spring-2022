@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	                    http://www.springframework.org/schema/beans/spring-beans.xsd
+	                    http://www.springframework.org/schema/context
+	                    http://www.springframework.org/schema/context/spring-context.xsd
+	                    http://www.springframework.org/schema/aop
+	                    http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<bean id="data4" class="kr.hs.study.beans.DataBean4" />
+	<bean id="java4" class="kr.hs.study.beans.TestBean4">
+		<constructor-arg value="10" type="int" />
+		<constructor-arg value="spring" type="String" />
+		<constructor-arg ref="data4" />
+	</bean>
+	
+	<bean id="java5" class="kr.hs.study.beans.TestBean4">
+		<property name="data1" value="200" />
+		<property name="data2" value="spring5" />
+		<property name="data4" ref="data4" />
+	</bean>
+</beans>
